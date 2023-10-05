@@ -1,16 +1,156 @@
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
-test
+Packet # 1:
+CRC: B329AA60
+Concatenation Indicator: 0
+Destination Address: 0000000000C1
+Message Type: 02
+Payload Size: 0014
+Protocol Version: 1
+RTC ID: 8068
+Sequence ID: 0080
+Source Address: ECCD655507D9
+Type: AEFE
+
+Packet # 2:
+CRC: 99AC762B
+Concatenation Indicator: 0
+Destination Address: 0000000000C1
+Message Type: 02
+Payload Size: 0014
+Protocol Version: 1
+RTC ID: 8068
+Sequence ID: 0180
+Source Address: ECCD655507D9
+Type: AEFE
+
+Packet # 3:
+CRC: 000F70B3
+Destination Address: 011B19000000
+Source Address: ECCD655507D9
+Type: 88F7
+
+Packet # 4:
+CRC: 20691304
+Concatenation Indicator: 0
+Destination Address: 0000000000C1
+Message Type: 02
+Payload Size: 0014
+Protocol Version: 1
+RTC ID: 8068
+Sequence ID: 0280
+Source Address: ECCD655507D9
+Type: AEFE
+
+Packet # 5:
+CRC: 15BE67E8
+Destination Address: 011B19000000
+Source Address: ECCD655507D9
+Type: 88F7
+
+Packet # 6:
+CRC: 725F84F8
+Destination Address: 011B19000000
+Source Address: ECCD655507D9
+Type: 88F7
+
+Packet # 7:
+CRC: 0AECCF4F
+Concatenation Indicator: 0
+Destination Address: 0000000000C1
+Message Type: 02
+Payload Size: 0014
+Protocol Version: 1
+RTC ID: 8068
+Sequence ID: 0380
+Source Address: ECCD655507D9
+Type: AEFE
+
+Packet # 8:
+CRC: 95A8D8A9
+Concatenation Indicator: 0
+Destination Address: 0000000000C1
+Message Type: 02
+Payload Size: 0014
+Protocol Version: 1
+RTC ID: 8068
+Sequence ID: 0480
+Source Address: ECCD655507D9
+Type: AEFE
+
+Packet # 9:
+CRC: BF2D04E2
+Concatenation Indicator: 0
+Destination Address: 0000000000C1
+Message Type: 02
+Payload Size: 0014
+Protocol Version: 1
+RTC ID: 8068
+Sequence ID: 0580
+Source Address: ECCD655507D9
+Type: AEFE
+
+Packet # 10:
+CRC: C54B4451
+Destination Address: 011B19000000
+Source Address: ECCD655507D9
+Type: 88F7
+
+Packet # 11:
+CRC: 06E861CD
+Concatenation Indicator: 0
+Destination Address: 0000000000C1
+Message Type: 02
+Payload Size: 0014
+Protocol Version: 1
+RTC ID: 8068
+Sequence ID: 0680
+Source Address: ECCD655507D9
+Type: AEFE
+
+Packet # 12:
+CRC: 2C6DBD86
+Concatenation Indicator: 0
+Destination Address: 0000000000C1
+Message Type: 02
+Payload Size: 0014
+Protocol Version: 1
+RTC ID: 8068
+Sequence ID: 0780
+Source Address: ECCD655507D9
+Type: AEFE
+
+Packet # 13:
+CRC: BE2D3E29
+Concatenation Indicator: 0
+Destination Address: 0000000000C1
+Message Type: 02
+Payload Size: 0014
+Protocol Version: 1
+RTC ID: 8068
+Sequence ID: 0880
+Source Address: ECCD655507D9
+Type: AEFE
+
+Packet # 14:
+CRC: 0B35F9E9
+Destination Address: 011B19000000
+Source Address: ECCD655507D9
+Type: 88F7
+
+Packet # 15:
+CRC: BC213940
+Destination Address: 011B19000000
+Source Address: ECCD655507D9
+Type: 88F7
+
+Packet # 16:
+CRC: 94A8E262
+Concatenation Indicator: 0
+Destination Address: 0000000000C1
+Message Type: 02
+Payload Size: 0014
+Protocol Version: 1
+RTC ID: 8068
+Sequence ID: 0980
+Source Address: ECCD655507D9
+Type: AEFE
+
