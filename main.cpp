@@ -8,7 +8,7 @@ int main()
     std::ofstream outputFile("io/output_packets");
     std::string line;
 
-    PacketParser *parser = new PacketParser();
+    PacketParser parser;
 
     inputFile.open("io/input_packets", std::ios::in);
 
@@ -20,7 +20,9 @@ int main()
         while (getline(inputFile, line))
         {
             outputFile << "Packet # " << ++lineCount << ":" << std::endl;
-            outputFile << parser->ParsePacket(line) << std::endl; // Parse the input line and append the formatted data to the output file
+            outputFile << line << std::endl;    // write whole packet
+            outputFile << parser.ParsePacket(line) << std::endl; // Parse the input line and append the formatted data to the output file
+            outputFile << std::string(30, '*') << "\n \n";       
         }
 
         // Close the file when done
