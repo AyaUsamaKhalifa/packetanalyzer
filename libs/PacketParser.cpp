@@ -1,6 +1,6 @@
 #include "PacketParser.h"
 #include <sstream>
-
+#include <iostream>
 #define ECPRI_TYPE "AEFE"
 
 PacketParser::PacketParser(std::string line)
@@ -40,10 +40,10 @@ std::string PacketParser::ParsePacket(std::string packet)
         CurrentDataPacket = new RawEthernetPacket();
 
         // Set Data
-        CurrentDataPacket->SetDataField(PacketDataFields::CRC, packet.substr((packet.size() - (4 * 2)), (4 * 2)));    // Last 4 bytes
-        CurrentDataPacket->SetDataField(PacketDataFields::DestinationAddress, packet.substr(((8 * 2) - 1), (6 * 2))); // Bytes 9:14
-        CurrentDataPacket->SetDataField(PacketDataFields::SourceAddress, packet.substr(((14 * 2) - 1), (6 * 2)));     // Bytes 15:20
-        CurrentDataPacket->SetDataField(PacketDataFields::Type, packet.substr(((20 * 2) - 1), (2 * 2)));              // Bytes 21:23
+        CurrentDataPacket->SetDataField(PacketDataFields::CRC, packet.substr((packet.size() - (4 * 2)), (4 * 2))); // Last 4 bytes
+        CurrentDataPacket->SetDataField(PacketDataFields::DestinationAddress, packet.substr((8 * 2), (6 * 2)));    // Bytes 9:14
+        CurrentDataPacket->SetDataField(PacketDataFields::SourceAddress, packet.substr((14 * 2), (6 * 2)));        // Bytes 15:20
+        CurrentDataPacket->SetDataField(PacketDataFields::Type, packet.substr((20 * 2), (2 * 2)));                 // Bytes 21:23
     }
 
     DataFormatterVisitor formattedPacketVisitor;
