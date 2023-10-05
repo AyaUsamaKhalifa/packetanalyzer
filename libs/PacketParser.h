@@ -9,7 +9,7 @@ private:
     EthernetPacket * CurrentDataPacket;
 public:
     PacketParser();
-    void ParsePacket(std::string packet);
+    std::string ParsePacket(std::string packet);
     std::string GetFormattedData();
     bool IseCPRIPacket(std::string packet);
     ~PacketParser();

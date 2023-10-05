@@ -5,7 +5,7 @@ PacketParser::PacketParser()
 {
 }
 
-void PacketParser::ParsePacket(std::string packet)
+std::string PacketParser::ParsePacket(std::string packet)
 {
 
 }
