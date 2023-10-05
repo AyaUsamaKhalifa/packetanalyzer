@@ -15,5 +15,5 @@ public:
     std::string GetDataField(PacketDataFields fieldID);
     void SetDataField(PacketDataFields fieldID, std::string fieldValue);
     virtual std::string Accept(DataFormatterVisitor* visitor) = 0;
-    ~EthernetPacket();
+    virtual ~EthernetPacket();
 };
