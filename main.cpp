@@ -19,8 +19,7 @@ int main()
         // Read each line in the file and parse it.
         while (getline(inputFile, line))
         {
-            // Uncomment the following code after implementing the PacketParser class
-            // outputFile << parser->ParsePacket(line); // Parse the input line and append the formatted data to the output file
+            outputFile << parser->ParsePacket(line); // Parse the input line and append the formatted data to the output file
         }
 
         // Close the file when done
@@ -29,7 +28,7 @@ int main()
     }
     else
     {
-        std::cout << "File didn't open succesfully" << std::endl;
+        std::cout << "File didn't open successfully" << std::endl;
     }
 
     return 0;
