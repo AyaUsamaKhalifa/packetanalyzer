@@ -8,7 +8,7 @@ int main()
     std::ofstream outputFile("io/output_packets");
     std::string line;
 
-    PacketParser *parser;
+    PacketParser *parser = new PacketParser();
 
     inputFile.open("io/input_packets", std::ios::in);
 
