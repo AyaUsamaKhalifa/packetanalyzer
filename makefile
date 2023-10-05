@@ -1,37 +1,29 @@
 # Compiler
 CC = g++
 
-# Compiler Flags
-CFLAGS = -c
-
-# Object files
-OBJS = PacketParser.o EthernetPacket.o RawEthernetPacket.o eCPRIPacket.o DataFormatterVisitor.o main.o
-
 # executable
 EXE = main
 
+# Object files
+OBJS = ./libs/PacketParser.o ./libs/EthernetPacket.o ./libs/RawEthernetPacket.o ./libs/eCPRIPacket.o ./libs/DataFormatterVisitor.o main.o
+
+# Compiler Flags
+CFLAGS = -c
+
+# Include files
+INCLUDES = -I./libs
+
 all: $(EXE)
+	
+$(EXE): makelibs main.o
+	$(CC) $(INCLUDES) $(OBJS) -o $(EXE)
 
-$(EXE): $(OBJS)
-	$(CC) $(OBJS) -o $(EXE)
-
-PacketParser.o: PacketParser.cpp PacketParser.h
-	$(CC) $(CFLAGS) PacketParser.cpp
-
-EthernetPacket.o: EthernetPacket.cpp EthernetPacket.h
-	$(CC) $(CFLAGS) EthernetPacket.cpp
-
-RawEthernetPacket.o: RawEthernetPacket.cpp RawEthernetPacket.h
-	$(CC) $(CFLAGS) RawEthernetPacket.cpp
-
-eCPRIPacket.o: eCPRIPacket.cpp eCPRIPacket.h
-	$(CC) $(CFLAGS) eCPRIPacket.cpp
-
-DataFormatterVisitor.o: DataFormatterVisitor.cpp DataFormatterVisitor.h
-	$(CC) $(CFLAGS) DataFormatterVisitor.cpp
+makelibs:
+	$(MAKE) -C libs
 
 main.o: main.cpp
 	$(CC) $(CFLAGS) main.cpp
 
 clean:
+	$(MAKE) -C libs clean
 	rm -f *.o $(EXE)
