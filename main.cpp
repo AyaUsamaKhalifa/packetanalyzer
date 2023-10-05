@@ -1,20 +1,16 @@
 #include <iostream>
 #include <fstream>
-#include <DataFormatterVisitor.h>
-#include <PacketParser.h>
-
-using namespace std;
+#include "libs/PacketParser.h"
 
 int main()
 {
-    ifstream inputFile;
-    ofstream outputFile;
+    std::ifstream inputFile;
+    std::ofstream outputFile("io/output_packets");
     std::string line;
 
-    PacketParser* parser = new PacketParser();
-    
-    inputFile.open("io/input_packets", ios::in);
-    outputFile.open("io/output_packets", ios::out);
+    PacketParser *parser;
+
+    inputFile.open("io/input_packets", std::ios::in);
 
     // Condition to check if the file was opened successfully
     if (inputFile.is_open())
@@ -23,7 +19,8 @@ int main()
         // Read each line in the file and parse it.
         while (getline(inputFile, line))
         {
-            outputFile << parser->ParsePacket(line); // Parse the input line and append the formatted data to the output file
+            // Uncomment the following code after implementing the PacketParser class
+            // outputFile << parser->ParsePacket(line); // Parse the input line and append the formatted data to the output file
         }
 
         // Close the file when done
@@ -32,7 +29,7 @@ int main()
     }
     else
     {
-        cout << "File didn't open succesfully" << endl;
+        std::cout << "File didn't open succesfully" << std::endl;
     }
 
     return 0;
