@@ -16,13 +16,13 @@ INCLUDES = -I./libs
 all: $(EXE)
 	
 $(EXE): makelibs main.o
-	$(CC) $(INCLUDES) $(OBJS) -o $(EXE)
+	$(CC) $(OBJS) -o $(EXE)
 
 makelibs:
 	$(MAKE) -C libs
 
 main.o: main.cpp
-	$(CC) $(CFLAGS) main.cpp
+	$(CC) $(INCLUDES) $(CFLAGS) main.cpp
 
 clean:
 	$(MAKE) -C libs clean

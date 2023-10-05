@@ -7,7 +7,7 @@ PacketParser::PacketParser()
 
 std::string PacketParser::ParsePacket(std::string packet)
 {
-
+    return "";
 }
 
 std::string PacketParser::GetFormattedData()
