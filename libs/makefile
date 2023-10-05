@@ -2,7 +2,7 @@
 CC = g++
 
 # Compiler Flags
-CFLAGS = -c
+CFLAGS = -c -std=c++20
 
 # Object files
 OBJS = PacketParser.o EthernetPacket.o RawEthernetPacket.o eCPRIPacket.o DataFormatterVisitor.o

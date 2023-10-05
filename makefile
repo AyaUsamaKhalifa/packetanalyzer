@@ -8,7 +8,7 @@ EXE = main
 OBJS = ./libs/PacketParser.o ./libs/EthernetPacket.o ./libs/RawEthernetPacket.o ./libs/eCPRIPacket.o ./libs/DataFormatterVisitor.o main.o
 
 # Compiler Flags
-CFLAGS = -c
+CFLAGS = -c -std=c++20
 
 # Include files
 INCLUDES = -I./libs
