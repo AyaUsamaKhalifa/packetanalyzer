@@ -15,11 +15,12 @@ int main()
     // Condition to check if the file was opened successfully
     if (inputFile.is_open())
     {
-
+        int lineCount = 0;
         // Read each line in the file and parse it.
         while (getline(inputFile, line))
         {
-            outputFile << parser->ParsePacket(line); // Parse the input line and append the formatted data to the output file
+            outputFile << "Packet # " << ++lineCount << ":" << std::endl;
+            outputFile << parser->ParsePacket(line) << std::endl; // Parse the input line and append the formatted data to the output file
         }
 
         // Close the file when done
